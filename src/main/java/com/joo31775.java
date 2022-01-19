@@ -2,11 +2,8 @@ package com;
 
 
 import org.bukkit.ChatColor;
-import org.bukkit.GameRule;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,23 +19,9 @@ public final class joo31775 extends JavaPlugin {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer(); // key
-        player.sendMessage(ChatColor.BLUE + "Welcome."); // checkpoint 2
-
-        boolean hasPlayed = player.hasPlayedBefore();
-        if (hasPlayed == false) {
-            player.sendMessage("First joining!");   // It dont have to work.
-        }
+        player.sendMessage(ChatColor.BLUE + " Welcome."); // here doesn't work
+        player.sendMessage("Chatcolor error..?"); // here, either
     }
-
-
-
-
-
-    public class PlayerJoining implements Listener {
-        // ?
-
-    }
-
 
 
     @Override
