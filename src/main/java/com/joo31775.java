@@ -1,6 +1,6 @@
 package com;
 
-import org.apache.logging.log4j.LogManager;
+
 import org.bukkit.GameRule;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
