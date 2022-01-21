@@ -22,7 +22,6 @@ public final class joo31775 extends JavaPlugin {
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer(); // The key
         player.sendMessage(ChatColor.BLUE + " Welcome."); // here doesn't work
-        player.sendMessage("Normal Welcome."); // here, either
     }
 
 
