@@ -30,10 +30,10 @@ public final class joo31775 extends JavaPlugin implements EventListener {
         getLogger().warning("Player JoinEvent triggered.");
 
         @NotNull TextComponent text = Component.text("Welcome.") // Adventure API. remember!
-        .color(NamedTextColor.BLUE); // action bar??
+        .color(NamedTextColor.BLUE);
 
         Player player = event.getPlayer(); // The key
-        player.sendMessage(text);
+        player.sendActionBar(text);
     }
 
 
