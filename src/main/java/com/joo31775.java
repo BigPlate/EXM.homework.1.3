@@ -4,6 +4,7 @@ package com;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -18,6 +19,7 @@ public final class joo31775 extends JavaPlugin implements EventListener {
     @Override
     public void onEnable() {
         getLogger().warning("server started."); //checked.
+
         // Plugin startup logic
     }
 
@@ -26,8 +28,12 @@ public final class joo31775 extends JavaPlugin implements EventListener {
     @EventHandler
     public void onPlayerJoin (PlayerJoinEvent event) {
         getLogger().warning("Player JoinEvent triggered.");
+
+        @NotNull TextComponent text = Component.text("Welcome.") // Adventure API. remember!
+        .color(NamedTextColor.BLUE); // action bar??
+
         Player player = event.getPlayer(); // The key
-        @NotNull TextComponent text = Component.text("2");
+        player.sendMessage(text);
     }
 
 
