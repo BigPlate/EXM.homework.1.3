@@ -15,16 +15,13 @@ public final class joo31775 extends JavaPlugin implements Listener {  //here is 
 
     @Override
     public void onEnable() {
-        getLogger().warning("server started."); //checked.
         Bukkit.getServer().getPluginManager().registerEvents(this, this); // using listener
     }
 
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        getLogger().warning("Player JoinEvent triggered.");
         event.getPlayer().sendActionBar(Component.text("Welcome",(NamedTextColor.BLUE)));
-
     }
 
     @Override
